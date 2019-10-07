@@ -1,0 +1,11 @@
+#trivia_title {
+  color: white;
+  text-align: center;
+  font-family: "Notable", sans-serif;
+  font-weight: 600;
+}
+#trivia_div {
+  background-color: red;
+  padding: 10px;
+  margin: 10px;
+}
