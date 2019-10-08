@@ -8,7 +8,7 @@ import NextButton from "./Components/NextButton/NextButton";
 class App extends React.Component {
   state = {
     userAnswer: null,
-    currentQuestion: 1,
+    currentQuestion: 0,
     options: []
   };
 
