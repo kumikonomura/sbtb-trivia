@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import "./QuestionBox.css";
 
-const QuestionBox = _ => {
-    return (
-        <h1>Question Box</h1>
-    )
-}
+const QuestionBox = props => {
+  return (
+    <div>
+      <h1 id="questions">{props.question}</h1>
+      {props.options.map(option => (
+        <p id="multiple_options" className="ui floating message">
+          {option}
+        </p>
+      ))}
+    </div>
+  );
+};
 
-export default QuestionBox
+export default QuestionBox;
