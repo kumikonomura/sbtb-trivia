@@ -32,9 +32,14 @@ export const quizQuestions = [
     answer: `Time out!`
   },
   {
-    question: `True or false: Zack Morris's blond hair was natural`,
-    options: [`True`, `False`],
-    answer: "False"
+    question: `An argument over which two opoosing interests leads Jessie and Slater to break up?`,
+    options: [
+      `Ballet versus football`,
+      `Tofu versus steak`,
+      `Vests versus Zubaz`,
+      `Sitting in chairs properly versus sitting in chairs backwards`
+    ],
+    answer: "Ballet versus football"
   },
   {
     question: `What's the name of the beach club where Zack falls in love with Stacey Carosi during season three`,
@@ -62,9 +67,14 @@ export const quizQuestions = [
     answer: "Bulldogs"
   },
   {
-    question: `What was the name of Tori Spelling's character?`,
-    options: ["Rose", "Christina", "Leslie", "Violet"],
-    answer: "Violet"
+    question: `What do Lisa's parents do for a living?`,
+    options: [
+      `They're both doctors`,
+      `Mom's doctor, dad's a lawyer`,
+      `Mom's a lawyer, dad's a doctor`,
+      `They're both lawyers`
+    ],
+    answer: `They're both doctors`
   },
   {
     question:
@@ -78,14 +88,19 @@ export const quizQuestions = [
     answer: "The gift-wrapping stand"
   },
   {
-    question: `What is Mr. Belding's wife's name?`,
-    options: ["Becky", "Melanie", "Penny", "Judy"],
-    answer: "Becky"
+    question: `What did Slater crash into while driving the driver's ed car, injuring Kelly's head in the process?`,
+    options: ["Lockers", "Nerds", "A chalkboard", "A vending machine"],
+    answer: "Lockers"
   },
   {
-    question: "Mr. Tuttle taught all of these subjects except:",
-    options: [`Driver's Ed`, `Glee Club`, `Art`],
-    answer: "Art"
+    question: `Why does Mr. Belding's cool brother Rod ditch a planned field trip with the kids?`,
+    options: [
+      `He's got a job interview`,
+      `He's got a date with a stewardess`,
+      `He's got to score some speed`,
+      `He's going to see Motley Crue`
+    ],
+    answer: `He's got a date with a stewardess`
   },
   {
     question: `What was the name of the girl Slater fell in love with while the group was in Palm Springs for Jessie's dad's wedding?`,

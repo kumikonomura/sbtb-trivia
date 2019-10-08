@@ -8,7 +8,7 @@ import NextButton from "./Components/NextButton/NextButton";
 class App extends React.Component {
   state = {
     userAnswer: null,
-    currentQuestion: 0,
+    currentQuestion: 1,
     options: []
   };
 
@@ -34,6 +34,7 @@ class App extends React.Component {
     });
     console.log(this.state.currentQuestion);
   };
+
   // update the component
   componentDidUpdate(prevProps, prevState) {
     const currentQuestion = this.state.currentQuestion;
@@ -55,6 +56,7 @@ class App extends React.Component {
         <QuestionBox
           question={this.state.question}
           options={this.state.options}
+          currentQuestion={this.state.currentQuestion}
         />
         <NextButton handleNextQuestion={this.handleNextQuestion} />
       </>
