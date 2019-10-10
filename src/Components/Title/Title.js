@@ -4,7 +4,7 @@ import "./Title.css";
 const Title = _ => {
   return (
     <div id="trivia_div">
-      <h1 id="trivia_title">SAVED BY THE BELL</h1>
+      <h1 id="trivia_title">SAVED BY THE BELL: TRIVIA</h1>
     </div>
   );
 };

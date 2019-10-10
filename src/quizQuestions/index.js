@@ -8,7 +8,7 @@ export const quizQuestions = [
       `Good Morning, Miss Bliss`,
       `High School Never Ends`
     ],
-    answer: `Good Morning, Miss Bliss`
+    correct: `Good Morning, Miss Bliss`
   },
   {
     question: "What did A.C. stand for?",
@@ -18,18 +18,18 @@ export const quizQuestions = [
       `Absolutely Charming Slater`,
       `Andres Caleb Slater`
     ],
-    answer: `Albert Clifford Slater`
+    correct: `Albert Clifford Slater`
   },
   {
     question: "Who did Kelly break up with Zack for in season two?",
     options: [`A.C. Slater`, `Johnny Dakota`, `Screech`, `Jeffrey Hunter`],
-    answer: `Jeffrey Hunter`
+    correct: `Jeffrey Hunter`
   },
   {
     question:
       "What did Zack always say before the show froze and he analyzed the situation around him?",
     options: [`Freeze!`, `Time out!`, `Hold up!`, `Pause!`],
-    answer: `Time out!`
+    correct: `Time out!`
   },
   {
     question: `An argument over which two opoosing interests leads Jessie and Slater to break up?`,
@@ -39,7 +39,7 @@ export const quizQuestions = [
       `Vests versus Zubaz`,
       `Sitting in chairs properly versus sitting in chairs backwards`
     ],
-    answer: "Ballet versus football"
+    correct: "Ballet versus football"
   },
   {
     question: `What's the name of the beach club where Zack falls in love with Stacey Carosi during season three`,
@@ -49,7 +49,7 @@ export const quizQuestions = [
       `Bayside Beach Club`,
       `Malibu Sands Beach Club`
     ],
-    answer: "Malibu Sands Beach Club"
+    correct: "Malibu Sands Beach Club"
   },
   {
     question: `What kind of car was Zack trying to buy from Mr. Carosi?`,
@@ -59,12 +59,12 @@ export const quizQuestions = [
       `1966 Mustang`,
       `1969 Dodge Charger`
     ],
-    answer: "1966 Mustang"
+    correct: "1966 Mustang"
   },
   {
     question: `What was the name of Valley High's mascot?`,
     options: ["Bulldogs", "Tigers", "Lions", "Panthers"],
-    answer: "Bulldogs"
+    correct: "Bulldogs"
   },
   {
     question: `What do Lisa's parents do for a living?`,
@@ -74,7 +74,7 @@ export const quizQuestions = [
       `Mom's a lawyer, dad's a doctor`,
       `They're both lawyers`
     ],
-    answer: `They're both doctors`
+    correct: `They're both doctors`
   },
   {
     question:
@@ -85,12 +85,12 @@ export const quizQuestions = [
       "The food court",
       `Moody's Store For Men`
     ],
-    answer: "The gift-wrapping stand"
+    correct: "The gift-wrapping stand"
   },
   {
     question: `What did Slater crash into while driving the driver's ed car, injuring Kelly's head in the process?`,
     options: ["Lockers", "Nerds", "A chalkboard", "A vending machine"],
-    answer: "Lockers"
+    correct: "Lockers"
   },
   {
     question: `Why does Mr. Belding's cool brother Rod ditch a planned field trip with the kids?`,
@@ -100,17 +100,17 @@ export const quizQuestions = [
       `He's got to score some speed`,
       `He's going to see Motley Crue`
     ],
-    answer: `He's got a date with a stewardess`
+    correct: `He's got a date with a stewardess`
   },
   {
     question: `What was the name of the girl Slater fell in love with while the group was in Palm Springs for Jessie's dad's wedding?`,
     options: ["Kimberly", "Samantha", "Christina", "Leslie"],
-    answer: "Christina"
+    correct: "Christina"
   },
   {
     question: "Where did Zack, Kelly, Slater, and Screech attend college?",
     options: ["Stanford", "UCLA", "USC", "Cal U"],
-    answer: "Cal U"
+    correct: "Cal U"
   },
   {
     question:
@@ -121,6 +121,6 @@ export const quizQuestions = [
       "Saved by the Bell: Wedding in Las Vegas",
       "Saved by the Bell: The College Years"
     ],
-    answer: "Saved by the Bell: The Glory Days"
+    correct: "Saved by the Bell: The Glory Days"
   }
 ];
