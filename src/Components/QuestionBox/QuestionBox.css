@@ -5,8 +5,12 @@
 #multiple_options {
   margin: 18px;
 }
+
 #question_number {
   margin: 20px;
   font-size: 20px;
   font-weight: 600;
+}
+.ui.floating.message:hover {
+  background-color: red;
 }
