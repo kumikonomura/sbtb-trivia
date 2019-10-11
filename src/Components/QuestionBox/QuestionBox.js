@@ -19,7 +19,7 @@ const QuestionBox = props => {
         <p
           id="multiple_options"
           className="ui floating message"
-          onClick={props.handleCheckAnswer}
+          onClick={() => props.handleCheckAnswer(option)}
         >
           {option}
         </p>

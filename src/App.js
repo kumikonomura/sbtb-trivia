@@ -9,7 +9,8 @@ class App extends React.Component {
   state = {
     userAnswer: null,
     currentQuestion: 0,
-    options: []
+    options: [],
+    questionAnswered: false
   };
 
   // function to handle getting questions from quizQuestions file
@@ -54,11 +55,18 @@ class App extends React.Component {
 
   // function to handle if answer is correct or not
   handleCheckAnswer = answer => {
-    let currentQuestion = this.state.currentQuestion
+    console.log(answer);
+    let currentQuestion = this.state.currentQuestion;
     if (quizQuestions[currentQuestion].correct === answer) {
-      console.log('this is correct')
+      console.log("this is correct");
+      this.setState({
+        questionAnswered: true
+      });
     } else {
-      console.log('wrong answer')
+      console.log("wrong answer");
+      this.setState({
+        questionAnswered: false
+      });
     }
   };
 
@@ -73,7 +81,9 @@ class App extends React.Component {
           userAnswer={this.state.userAnswer}
           handleCheckAnswer={this.handleCheckAnswer}
         />
-        <NextButton handleNextQuestion={this.handleNextQuestion} />
+        {this.state.questionAnswered === true ? (
+          <NextButton handleNextQuestion={this.handleNextQuestion} />
+        ) : null}
       </>
     );
   }
