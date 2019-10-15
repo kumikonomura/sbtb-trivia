@@ -70,6 +70,9 @@ class App extends React.Component {
     }
   };
 
+  // function to summarize how many right answers vs. wrong
+  
+
   render() {
     return (
       <>
