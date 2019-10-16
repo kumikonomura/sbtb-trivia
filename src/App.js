@@ -4,13 +4,15 @@ import Title from "./Components/Title";
 import { quizQuestions } from "./quizQuestions";
 import QuestionBox from "./Components/QuestionBox/QuestionBox";
 import NextButton from "./Components/NextButton/NextButton";
+import ResultBox from "./Components/ResultBox/ResultBox";
 
 class App extends React.Component {
   state = {
     userAnswer: null,
     currentQuestion: 0,
     options: [],
-    questionAnswered: false
+    questionAnswered: false,
+    userScore: 0
   };
 
   // function to handle getting questions from quizQuestions file
@@ -59,6 +61,7 @@ class App extends React.Component {
     let currentQuestion = this.state.currentQuestion;
     if (quizQuestions[currentQuestion].correct === answer) {
       console.log("this is correct");
+      this.handleUserScore()
       this.setState({
         questionAnswered: true
       });
@@ -70,8 +73,15 @@ class App extends React.Component {
     }
   };
 
-  // function to summarize how many right answers vs. wrong
-  
+  // function to handle the user's overall score
+  handleUserScore = _ => {
+    console.log('add a point to user score!!')
+    const userScore = this.state.userScore
+    this.setState({
+      userScore: userScore + 1
+    })
+  }
+
 
   render() {
     return (
@@ -84,9 +94,14 @@ class App extends React.Component {
           userAnswer={this.state.userAnswer}
           handleCheckAnswer={this.handleCheckAnswer}
         />
+        <ResultBox
+        userScore={this.state.userScore}
+        handleUserScore={this.handleUserScore}
+        />
         {this.state.questionAnswered === true ? (
           <NextButton handleNextQuestion={this.handleNextQuestion} />
-        ) : null}
+        ) : null }
+
       </>
     );
   }
