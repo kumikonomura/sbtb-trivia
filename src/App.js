@@ -5,6 +5,7 @@ import { quizQuestions } from "./quizQuestions";
 import QuestionBox from "./Components/QuestionBox/QuestionBox";
 import NextButton from "./Components/NextButton/NextButton";
 import ResultBox from "./Components/ResultBox/ResultBox";
+import UserScore from './Components/UserScore/UserScore'
 
 class App extends React.Component {
   state = {
@@ -94,7 +95,7 @@ class App extends React.Component {
           userAnswer={this.state.userAnswer}
           handleCheckAnswer={this.handleCheckAnswer}
         />
-        <ResultBox
+        <UserScore
         userScore={this.state.userScore}
         handleUserScore={this.handleUserScore}
         />

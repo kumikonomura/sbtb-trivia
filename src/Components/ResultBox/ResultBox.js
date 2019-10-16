@@ -12,8 +12,8 @@ const ResultBox = props => {
         padding: "10px"
       }}
     >
-    <h1>User Score: {props.userScore}</h1>
-      {/* <img id="wrong_answer" src={WrongAnswer} /> */}
+    {/* <h1>User Score: {props.userScore}</h1> */}
+      <img id="wrong_answer" src={WrongAnswer} />
     </div>
   );
 };
