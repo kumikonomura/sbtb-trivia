@@ -5,7 +5,7 @@ import { quizQuestions } from "./quizQuestions";
 import QuestionBox from "./Components/QuestionBox/QuestionBox";
 import NextButton from "./Components/NextButton/NextButton";
 import ResultBox from "./Components/ResultBox/ResultBox";
-import UserScore from './Components/UserScore/UserScore'
+import UserScore from "./Components/UserScore/UserScore";
 
 class App extends React.Component {
   state = {
@@ -36,8 +36,10 @@ class App extends React.Component {
   // function to handle getting the next question and so forth
   handleNextQuestion = _ => {
     let currentQuestion = this.state.currentQuestion;
+    let questionAnswered = this.state.questionAnswered;
     this.setState({
-      currentQuestion: currentQuestion + 1
+      currentQuestion: currentQuestion + 1,
+      questionAnswered: false
     });
     console.log(this.state.currentQuestion);
   };
@@ -62,7 +64,7 @@ class App extends React.Component {
     let currentQuestion = this.state.currentQuestion;
     if (quizQuestions[currentQuestion].correct === answer) {
       console.log("this is correct");
-      this.handleUserScore()
+      this.handleUserScore();
       this.setState({
         questionAnswered: true
       });
@@ -76,13 +78,12 @@ class App extends React.Component {
 
   // function to handle the user's overall score
   handleUserScore = _ => {
-    console.log('add a point to user score!!')
-    const userScore = this.state.userScore
+    console.log("add a point to user score!!");
+    const userScore = this.state.userScore;
     this.setState({
       userScore: userScore + 1
-    })
-  }
-
+    });
+  };
 
   render() {
     return (
@@ -96,13 +97,12 @@ class App extends React.Component {
           handleCheckAnswer={this.handleCheckAnswer}
         />
         <UserScore
-        userScore={this.state.userScore}
-        handleUserScore={this.handleUserScore}
+          userScore={this.state.userScore}
+          handleUserScore={this.handleUserScore}
         />
         {this.state.questionAnswered === true ? (
           <NextButton handleNextQuestion={this.handleNextQuestion} />
-        ) : null }
-
+        ) : null}
       </>
     );
   }
