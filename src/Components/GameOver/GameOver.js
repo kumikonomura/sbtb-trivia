@@ -11,6 +11,7 @@ const GameOver = _ => {
       }}
     >
       <h1>GAME OVER</h1>
+      <button>Restart Game</button>
     </div>
   );
 };
