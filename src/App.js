@@ -7,6 +7,7 @@ import NextButton from "./Components/NextButton/NextButton";
 import ResultBox from "./Components/ResultBox/ResultBox";
 import UserScore from "./Components/UserScore/UserScore";
 import GameOver from "./Components/GameOver/GameOver";
+import { isParenthesizedExpression } from "@babel/types";
 
 class App extends React.Component {
   state = {
@@ -48,6 +49,7 @@ class App extends React.Component {
   // update the component
   componentDidUpdate(prevProps, prevState) {
     const currentQuestion = this.state.currentQuestion;
+    if (currentQuestion >= quizQuestions.length) return null
     if (this.state.currentQuestion !== prevState.currentQuestion) {
       this.setState(() => {
         return {
@@ -90,9 +92,7 @@ class App extends React.Component {
     return (
       <>
         <Title />
-        {this.state.currentQuestion === 14 ? (
-          <GameOver />
-        ) : (
+        {this.state.currentQuestion <= 14 ? (
           <QuestionBox
             question={this.state.question}
             options={this.state.options}
@@ -100,8 +100,9 @@ class App extends React.Component {
             userAnswer={this.state.userAnswer}
             handleCheckAnswer={this.handleCheckAnswer}
           />
+        ) : (
+          <GameOver />
         )}
-
         <UserScore
           userScore={this.state.userScore}
           handleUserScore={this.handleUserScore}

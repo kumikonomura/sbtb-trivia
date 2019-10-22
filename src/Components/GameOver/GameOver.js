@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
 
 const GameOver = _ => {
-    return (
-        <h1>Game Over</h1>
-    )
-}
+  return (
+    <div
+      style={{
+        border: "1px solid",
+        textAlign: "center",
+        margin: "50px",
+        padding: "10px"
+      }}
+    >
+      <h1>GAME OVER</h1>
+    </div>
+  );
+};
 
-export default GameOver
+export default GameOver;
