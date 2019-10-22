@@ -6,6 +6,7 @@ import QuestionBox from "./Components/QuestionBox/QuestionBox";
 import NextButton from "./Components/NextButton/NextButton";
 import ResultBox from "./Components/ResultBox/ResultBox";
 import UserScore from "./Components/UserScore/UserScore";
+import GameOver from "./Components/GameOver/GameOver";
 
 class App extends React.Component {
   state = {
@@ -89,13 +90,18 @@ class App extends React.Component {
     return (
       <>
         <Title />
-        <QuestionBox
-          question={this.state.question}
-          options={this.state.options}
-          currentQuestion={this.state.currentQuestion}
-          userAnswer={this.state.userAnswer}
-          handleCheckAnswer={this.handleCheckAnswer}
-        />
+        {this.state.currentQuestion === 14 ? (
+          <GameOver />
+        ) : (
+          <QuestionBox
+            question={this.state.question}
+            options={this.state.options}
+            currentQuestion={this.state.currentQuestion}
+            userAnswer={this.state.userAnswer}
+            handleCheckAnswer={this.handleCheckAnswer}
+          />
+        )}
+
         <UserScore
           userScore={this.state.userScore}
           handleUserScore={this.handleUserScore}
