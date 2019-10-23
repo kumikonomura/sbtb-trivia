@@ -7,11 +7,12 @@ const GameOver = _ => {
         border: "1px solid",
         textAlign: "center",
         margin: "50px",
-        padding: "10px"
+        padding: "10px",
+        backgroundColor: 'gold'
       }}
     >
       <h1>GAME OVER</h1>
-      <button>Restart Game</button>
+      <button className="ui red button">Restart Game</button>
     </div>
   );
 };

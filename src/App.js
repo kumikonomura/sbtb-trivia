@@ -49,7 +49,7 @@ class App extends React.Component {
   // update the component
   componentDidUpdate(prevProps, prevState) {
     const currentQuestion = this.state.currentQuestion;
-    if (currentQuestion >= quizQuestions.length) return null
+    if (currentQuestion >= quizQuestions.length) return null;
     if (this.state.currentQuestion !== prevState.currentQuestion) {
       this.setState(() => {
         return {
@@ -92,7 +92,8 @@ class App extends React.Component {
     return (
       <>
         <Title />
-        {this.state.currentQuestion <= 14 ? (
+        <GameOver />
+        {/* {this.state.currentQuestion <= 14 ? (
           <QuestionBox
             question={this.state.question}
             options={this.state.options}
@@ -102,7 +103,7 @@ class App extends React.Component {
           />
         ) : (
           <GameOver />
-        )}
+        )} */}
         <UserScore
           userScore={this.state.userScore}
           handleUserScore={this.handleUserScore}
