@@ -9,7 +9,8 @@ const QuestionBox = props => {
         border: "1px solid",
         textAlign: "center",
         margin: "50px",
-        padding: "10px"
+        padding: "10px",
+        backgroundColor: '#e9f259'
       }}
     >
       <span id="question_number">{`Question ${props.currentQuestion +

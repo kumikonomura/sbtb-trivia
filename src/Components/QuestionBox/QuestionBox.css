@@ -12,5 +12,6 @@
   font-weight: 600;
 }
 .ui.floating.message:hover {
-  background-color: red;
+  /* background-color: red; */
+  background-color: #7cf4d3
 }

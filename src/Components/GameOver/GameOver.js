@@ -8,11 +8,11 @@ const GameOver = _ => {
         textAlign: "center",
         margin: "50px",
         padding: "10px",
-        backgroundColor: 'gold'
+        backgroundColor: '#e9f259'
       }}
     >
       <h1>GAME OVER</h1>
-      <button className="ui red button">Restart Game</button>
+      <button style={{ backgroundColor: '#d46ce7'}}>Restart Game</button>
     </div>
   );
 };
