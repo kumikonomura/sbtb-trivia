@@ -2,7 +2,7 @@ import React from "react";
 import "./GameOver.css";
 import HighFive from "../../images/game_over.gif";
 
-const GameOver = _ => {
+const GameOver = props => {
   return (
     <div
       style={{
@@ -14,13 +14,17 @@ const GameOver = _ => {
       }}
     >
       <h1 id="gameover_title">GAME OVER</h1>
-      <img id="high_five" src={HighFive} />
+      {/* <img id="high_five" src={HighFive} /> */}
       <div
         style={{
           padding: "8px"
         }}
       >
-        <button id="restart" className="ui red button">
+        <button
+          id="restart"
+          className="ui red button"
+          onClick={props.handleRestartGame}
+        >
           Restart Game
         </button>
       </div>

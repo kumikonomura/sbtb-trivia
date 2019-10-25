@@ -7,7 +7,6 @@ import NextButton from "./Components/NextButton/NextButton";
 import ResultBox from "./Components/ResultBox/ResultBox";
 import UserScore from "./Components/UserScore/UserScore";
 import GameOver from "./Components/GameOver/GameOver";
-import { isParenthesizedExpression } from "@babel/types";
 
 class App extends React.Component {
   state = {
@@ -88,12 +87,20 @@ class App extends React.Component {
     });
   };
 
+  // function to restart the game
+  handleRestartGame = _ => {
+    console.log("this function is working");
+    this.setState({
+      currentQuestion: 0
+    });
+  };
+
   render() {
     return (
       <>
         <Title />
-        <GameOver />
-        {/* {this.state.currentQuestion <= 14 ? (
+        {/* <GameOver  /> */}
+        {this.state.currentQuestion <= 14 ? (
           <QuestionBox
             question={this.state.question}
             options={this.state.options}
@@ -102,8 +109,8 @@ class App extends React.Component {
             handleCheckAnswer={this.handleCheckAnswer}
           />
         ) : (
-          <GameOver />
-        )} */}
+          <GameOver handleRestartGame={this.handleRestartGame} />
+        )}
         <UserScore
           userScore={this.state.userScore}
           handleUserScore={this.handleUserScore}

@@ -4,6 +4,9 @@
   font-size: 30px;
 }
 #high_five {
-    align-content: center;
+    /* align-content: center; */
     border: 2px solid;
+}
+#restart {
+    font-size: 15px;
 }
