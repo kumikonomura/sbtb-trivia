@@ -1,8 +1,10 @@
 #trivia_title {
   color: white;
   text-align: center;
-  font-family: "Notable", sans-serif;
+  /* font-family: "Notable", sans-serif; */
+  font-family: "Luckiest Guy", cursive;
   font-weight: 600;
+  font-size: 36px;
 }
 #trivia_div {
   background-color: red;
