@@ -92,8 +92,8 @@ class App extends React.Component {
     return (
       <>
         <Title />
-        {/* <GameOver /> */}
-        {this.state.currentQuestion <= 14 ? (
+        <GameOver />
+        {/* {this.state.currentQuestion <= 14 ? (
           <QuestionBox
             question={this.state.question}
             options={this.state.options}
@@ -103,7 +103,7 @@ class App extends React.Component {
           />
         ) : (
           <GameOver />
-        )}
+        )} */}
         <UserScore
           userScore={this.state.userScore}
           handleUserScore={this.handleUserScore}

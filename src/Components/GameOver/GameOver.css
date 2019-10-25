@@ -1,0 +1,9 @@
+#gameover_title {
+  font-family: "Luckiest Guy", cursive;
+  color: red;
+  font-size: 30px;
+}
+#high_five {
+    align-content: center;
+    border: 2px solid;
+}
