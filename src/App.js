@@ -99,7 +99,6 @@ class App extends React.Component {
     return (
       <>
         <Title />
-        {/* <GameOver  /> */}
         {this.state.currentQuestion <= 14 ? (
           <QuestionBox
             question={this.state.question}
