@@ -1,5 +1,5 @@
 import React from "react";
-import './UserScore.css'
+import "./UserScore.css";
 
 const UserScore = props => {
   return (
@@ -16,7 +16,7 @@ const UserScore = props => {
         style={{
           color: "white"
         }}
-        id='user_header'
+        id="user_header"
       >
         User Score: {props.userScore}
       </h1>
