@@ -66,12 +66,14 @@ class App extends React.Component {
     let currentQuestion = this.state.currentQuestion;
     if (quizQuestions[currentQuestion].correct === answer) {
       console.log("this is correct");
+      window.alert("Correct!");
       this.handleUserScore();
       this.setState({
         questionAnswered: true
       });
     } else {
       console.log("wrong answer");
+      window.alert("Wrong answer, try again!");
       this.setState({
         questionAnswered: false
       });
